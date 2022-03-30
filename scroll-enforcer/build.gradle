@@ -3,6 +3,17 @@ plugins {
     id 'kotlin-android'
 }
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
+
 android {
     compileSdk 32
 
